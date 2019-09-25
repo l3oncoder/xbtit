@@ -493,7 +493,7 @@ function userlogin()
 
     unset($GLOBALS['CURUSER']);
 
-    session_id('xbtit');
+    session_name('xbtit');
 
     $ip = getip(); //$_SERVER["REMOTE_ADDR"];
     $nip = ip2long($ip);
