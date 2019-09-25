@@ -261,7 +261,9 @@ function check_online($session_id, $location)
     global $TABLE_PREFIX, $CURUSER;
 
     session_name('xbtit');
-
+    session_start();
+    
+    $session_id=session_id();
     $overOneMinute = (((isset($_SESSION['ONLINE_EXPIRE']) && time() > $_SESSION['ONLINE_EXPIRE']) || !isset($_SESSION['ONLINE_EXPIRE'])) ? true : false);
     $locationHasChanged = (((isset($_SESSION['ONLINE_LOCATION']) && $_SESSION['ONLINE_LOCATION'] != $location) || !isset($_SESSION['ONLINE_LOCATION'])) ? true : false);
     $location = sqlesc($location);
