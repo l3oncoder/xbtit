@@ -100,7 +100,7 @@ print("</select></td>");
 }
 else
 {
-    session_id("xbtit");
+    session_name("xbtit");
 
     if(!isset($_SESSION)) {
         session_start();
